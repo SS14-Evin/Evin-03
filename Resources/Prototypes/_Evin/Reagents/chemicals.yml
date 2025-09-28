@@ -1,0 +1,37 @@
+- type: reagent
+  id: LithiumHydroxide
+  name: reagent-name-lithium-hydroxide
+  desc: reagent-desc-lithium-hydroxide
+  physicalDesc: reagent-physical-desc-alkaline
+  color: "#c2b4c1"
+  metabolisms:
+    Medicine:
+      metabolismRate: 1
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 2.5
+            Asphyxiation: -0.5
+
+- type: reagent
+  id: MercuryHydroxide
+  name: reagent-name-mercury-hydroxide
+  desc: reagent-desc-mercury-hydroxide
+  physicalDesc: reagent-physical-desc-alkaline
+  color: "#9c9c9c"
+  metabolisms:
+    Medicine:
+      metabolismRate: 1
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 2.5
+      - !type:GenericStatusEffect
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 15.0
+        refresh: false
+      - !type:Drunk

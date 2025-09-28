@@ -1,0 +1,15 @@
+- type: entity
+  name: коробка патронов (50. калибр химический)
+  parent: AmmoProviderShotgunShell
+  id: BoxChemicalshot
+  components:
+    - type: BallisticAmmoProvider
+      proto: BulletChemicalShotgun
+    - type: Sprite
+      sprite: /Textures/_Evin/Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: chemical

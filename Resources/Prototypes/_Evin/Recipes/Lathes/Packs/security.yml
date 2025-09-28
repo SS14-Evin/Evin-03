@@ -1,0 +1,7 @@
+- type: latheRecipePack
+  id: ChemicalArsenalPack
+  recipes:
+  - MagazinePistolSubMachineGunChemical
+  - MagazineBoxPistolChemical
+  - BoxChemicalshot
+  - ToxicGrenade

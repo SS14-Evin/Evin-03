@@ -1,0 +1,24 @@
+- type: entity
+  parent: SmokeGrenade
+  id: ThermalGrenade
+  name: термическая граната
+  description: Запрещено женевской конвенцией. Содержит прожигающую смесь флогистона и напалма. Не зажигается благодаря крио-стазису
+  components:
+  - type: Sprite
+    sprite: /Textures/_Evin/Objects/Weapons/Grenades/thermal.rsi
+  - type: SmokeOnTrigger
+    duration: 30
+    spreadAmount: 200
+    solution:
+      reagents:
+      - ReagentId: Phlogiston
+        Quantity: 80
+      - ReagentId: Napalm
+        Quantity: 120
+  - type: OnUseTimerTrigger
+    delay: 5
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: /Audio/Effects/thermalcountdown.ogg
+      params:
+        volume: 5

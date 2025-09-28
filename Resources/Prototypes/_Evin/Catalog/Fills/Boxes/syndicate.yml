@@ -1,0 +1,13 @@
+- type: entity
+  parent: BoxVial
+  id: ChemicalMedipenMorphium
+  name: Коробка морфия
+  description: Если хочешь чуть наслаждения в агентские будни. 
+  components:
+  - type: Storage
+    grid:
+    - 0,0,2,2
+  - type: StorageFill
+    contents:
+      - id: MorphuimMedipen
+        amount: 9

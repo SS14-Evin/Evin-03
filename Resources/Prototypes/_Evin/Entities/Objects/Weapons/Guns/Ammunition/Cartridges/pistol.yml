@@ -1,0 +1,30 @@
+- type: entity
+  id: BulletChemical
+  name: химический патрон (.35 авто)
+  parent: BaseCartridge
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgePistol
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: BulletEntityChemical
+    count: 1
+  - type: ChemicalAmmo
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 1
+  - type: SolutionTransfer
+    maxTransferAmount: 7
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: InjectableSolution
+    solution: ammo
+  - type: RefillableSolution
+    solution: ammo

@@ -785,6 +785,8 @@
     - MechWeaponsSecurityHeavy
     - SecurityAmmoGoob
     - SecurityCybernetics
+    # EvinStation
+    - ChemicalArsenalPack
     # - ServiceWeapons
     - SpecOpsGoogles
     - PowerCells

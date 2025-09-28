@@ -1,0 +1,48 @@
+- type: listing
+  id: UplinkChemicalMagazine
+  name: uplink-pistol-chemical-magazine-name
+  description: uplink-pistol-chemical-magazine-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: purple-icon }
+  productEntity: MagazinePistolSubMachineGunChemical
+  cost:
+    Telecrystal: 6
+  saleLimit: 3
+  categories:
+  - UplinkAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
+
+- type: listing
+  id: UplinkChemistryKitBundleMorphium
+  name: uplink-syndicate-morphium-box-name
+  description: uplink-syndicate-morphium-box-desc
+  icon: { sprite: /Textures/Objects/Storage/boxicons.rsi, state: vials }
+  productEntity: ChemicalMedipenMorphium
+  cost:
+    Telecrystal: 12
+  categories:
+  - UplinkChemicals
+
+- type: listing
+  id: UplinkToxicGrenade
+  name: uplink-thermal-grenade-name
+  description: uplink-thermal-grenade-desc
+  icon: { sprite: /Textures/_Evin/Objects/Weapons/Grenades/thermal.rsi, state: icon }
+  productEntity: ToxicGrenade
+  cost:
+    Telecrystal: 30
+  saleLimit: 2
+  categories:
+  - UplinkExplosives
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink

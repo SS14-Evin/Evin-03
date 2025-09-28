@@ -1,0 +1,17 @@
+- type: technology
+  id: ChemicalArsenal
+  name: research-technology-chemical-ammo
+  icon:
+    sprite: _Evin/Objects/Weapons/Guns/Ammunition/Magazine/smg_mag.rsi
+    state: purple-icon
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - MagazinePistolSubMachineGunChemical
+  - MagazineBoxPistolChemical
+  - BoxChemicalshot
+  - ToxicGrenade
+  position: 3,1
+  technologyPrerequisites:
+  - UraniumMunitions

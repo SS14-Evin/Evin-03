@@ -1,0 +1,1 @@
+research-technology-chemical-ammo = Химические патроны

@@ -1,0 +1,11 @@
+- type: reaction
+  id: Morphium
+  reactants:
+    Bicaridine:
+      amount: 1
+    LithiumHydroxide:
+      amount: 2
+    MercuryHydroxide:
+      amount: 2
+  products:
+    Morphium: 2

@@ -1,0 +1,40 @@
+- type: latheRecipe
+  id: MagazinePistolSubMachineGunChemical
+  result: MagazinePistolSubMachineGunChemical
+  category: Ammo
+  completetime: 20
+  materials:
+    Plastic: 60
+    Steel: 180
+    Glass: 240
+
+- type: latheRecipe
+  id: MagazineBoxPistolChemical
+  result: MagazineBoxPistolChemical
+  category: Ammo
+  completetime: 30
+  materials:
+    Plastic: 120
+    Steel: 360
+    Glass: 480
+
+- type: latheRecipe
+  id: ToxicGrenade
+  result: ToxicGrenade
+  category: Ammo
+  completetime: 15
+  materials:
+    Plastic: 1000
+    Glass : 500
+    Gold: 200
+    Plasma: 600
+
+- type: latheRecipe
+  id: BoxChemicalshot
+  result: BoxChemicalshot
+  category: Ammo
+  completetime: 20
+  materials:
+    Steel: 480
+    Glass: 640
+    Plasma: 240

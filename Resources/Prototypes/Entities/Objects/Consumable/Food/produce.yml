@@ -1913,7 +1913,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 24 # Goobstation
+        maxVol: 25.2 # Goobstation+EvinStation
         reagents:
         - ReagentId: Nutriment
           Quantity: 2
@@ -1921,6 +1921,8 @@
           Quantity: 20
         - ReagentId: Heroin # Goobstation
           Quantity: 2
+        - ReagentId: Morphium # EvinStation
+          Quantity: 1.2
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/poppy.rsi
   - type: Produce

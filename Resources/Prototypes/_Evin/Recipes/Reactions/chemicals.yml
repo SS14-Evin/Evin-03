@@ -1,0 +1,21 @@
+- type: reaction
+  id: MercuryHydroxide
+  reactants:
+    Hydroxide:
+      amount: 1
+    Mercury:
+      amount: 1
+  products:
+    MercuryHydroxide: 2
+
+- type: reaction
+  id: LithiumHydroxide
+  reactants:
+    Hydroxide:
+      amount: 1
+    Lithium:
+      amount: 1
+    Water:
+      amount: 2
+  products:
+    LithiumHydroxide: 2

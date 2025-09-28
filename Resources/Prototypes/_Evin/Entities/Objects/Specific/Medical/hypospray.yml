@@ -1,0 +1,31 @@
+- type: entity
+  name: автоинъектор морфия
+  parent: ChemicalMedipen
+  id: MorphuimMedipen
+  description: Доза наслаждения теперь всегда под рукой. Содержит 5 морфия, 5 физраствора и 5 транексамовой кислоты.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: salacid
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: salpen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Morphium
+          Quantity: 5
+        - ReagentId: Saline
+          Quantity: 5
+        - ReagentId: TranexamicAcid
+          Quantity: 5
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+  - type: StaticPrice
+    price: 110

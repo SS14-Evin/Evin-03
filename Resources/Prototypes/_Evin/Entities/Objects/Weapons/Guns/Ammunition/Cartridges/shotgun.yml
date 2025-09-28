@@ -1,0 +1,26 @@
+- type: entity
+  id: BulletChemicalShotgun
+  name: химический патрон (50. одиноч)
+  parent: BaseShellShotgun
+  components:
+  - type: Sprite
+    sprite: /Textures/_Evin/Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+    layers:
+      - state: chemical
+        map: ["enum.AmmoVisualLayers.Base"]
+  - type: CartridgeAmmo
+    proto: BulletEntityChemicalShotgun
+  - type: ChemicalAmmo
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 7
+  - type: SolutionTransfer
+    maxTransferAmount: 7
+  - type: Appearance
+  - type: InjectableSolution
+    solution: ammo
+  - type: RefillableSolution
+    solution: ammo
+  - type: SpentAmmoVisuals
+    state: "chemical"
