@@ -10,8 +10,8 @@
   recipeUnlocks:
   - MagazinePistolSubMachineGunChemical
   - MagazineBoxPistolChemical
+  - ThermalGrenade
   - BoxChemicalshot
-  - ToxicGrenade
   position: 3,1
   technologyPrerequisites:
   - UraniumMunitions

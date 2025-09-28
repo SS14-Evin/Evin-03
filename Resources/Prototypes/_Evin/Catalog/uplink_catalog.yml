@@ -2,7 +2,7 @@
   id: UplinkChemicalMagazine
   name: uplink-pistol-chemical-magazine-name
   description: uplink-pistol-chemical-magazine-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: purple-icon }
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/smg_mag.rsi, state: purple-icon }
   productEntity: MagazinePistolSubMachineGunChemical
   cost:
     Telecrystal: 6
@@ -31,11 +31,11 @@
   - UplinkChemicals
 
 - type: listing
-  id: UplinkToxicGrenade
+  id: UplinkThermalGrenade
   name: uplink-thermal-grenade-name
   description: uplink-thermal-grenade-desc
   icon: { sprite: /Textures/_Evin/Objects/Weapons/Grenades/thermal.rsi, state: icon }
-  productEntity: ToxicGrenade
+  productEntity: ThermalGrenade
   cost:
     Telecrystal: 30
   saleLimit: 2

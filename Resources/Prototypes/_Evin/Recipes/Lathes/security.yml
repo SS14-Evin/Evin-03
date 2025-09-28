@@ -19,8 +19,8 @@
     Glass: 480
 
 - type: latheRecipe
-  id: ToxicGrenade
-  result: ToxicGrenade
+  id: ThermalGrenade
+  result: ThermalGrenade
   category: Ammo
   completetime: 15
   materials:
