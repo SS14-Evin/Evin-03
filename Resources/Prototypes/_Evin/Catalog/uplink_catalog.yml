@@ -2,7 +2,7 @@
   id: UplinkChemicalMagazine
   name: uplink-pistol-chemical-magazine-name
   description: uplink-pistol-chemical-magazine-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/smg_mag.rsi, state: purple-icon }
+  icon: { sprite: /Textures/_Evin/Objects/Weapons/Guns/Ammunition/Magazine/smg_mag.rsi, state: purple-icon }
   productEntity: MagazinePistolSubMachineGunChemical
   cost:
     Telecrystal: 6

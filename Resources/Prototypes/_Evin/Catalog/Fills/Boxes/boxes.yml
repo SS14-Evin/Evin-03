@@ -1,0 +1,15 @@
+- type: entity
+  parent: BoxCardboard
+  id: WatcherBoxBlueshield
+  name: коробка очков и монитора камер
+  description: Обычная картонная коробочка.
+  components:
+  - type: Storage
+    grid:
+    - 0,0,2,2
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGlassesBlueshield
+        amount: 3
+      - id: CameraMonitorBlueshield
+        amount: 1

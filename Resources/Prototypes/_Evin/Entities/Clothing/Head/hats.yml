@@ -1,0 +1,33 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretParamedic
+  name: берет парамедика
+  description: Тёмно синий берет с крестом на передней части. Его вид успокаивает и внушает надежду, что вас найдут и спасут.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Evin/Clothing/Head/Hats/paramedberet.rsi
+  - type: Clothing
+    sprite: /Textures/_Evin/Clothing/Head/Hats/paramedberet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretChiefEngineering
+  name: берет старшего инженера
+  description: Белый берет с эмблемой инженерного отдела. Для старших инженеров, которые предпочитают стиль безопасности.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Evin/Clothing/Head/Hats/chiefengineerberet.rsi
+  - type: Clothing
+    sprite: /Textures/_Evin/Clothing/Head/Hats/chiefengineerberet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon

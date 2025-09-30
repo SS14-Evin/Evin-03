@@ -1582,7 +1582,7 @@
   minLimit: 0
   loadouts:
   - ParamedicHead
-  - SeniorPhysicianBeret # Goobstation
+  - ParamedicBeret # EvinStation
 
 - type: loadoutGroup
   id: ParamedicJumpsuit

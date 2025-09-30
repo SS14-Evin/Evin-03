@@ -64,3 +64,218 @@
     - HandheldCrewMonitor
   - type: Speech
     speechSounds: Borg
+
+# EvinStation Start
+- type: entity
+  name: лечебная пушка синего щита
+  parent: BaseItem
+  description: Направляет нестабильные медицинские наниты в виде сфокусированного луча. Только не пересекайте лучи!
+  suffix: Неограниченный, Синий щит
+  id: MedicalBeamGunBlueshield
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Specific/Medical/medigun.rsi
+    layers:
+    - state: icon
+    - state: active_gun
+      map: [ "enum.ToggleableVisuals.Layer" ]
+      visible: false
+  - type: Item
+    sprite: _Goobstation/Objects/Specific/Medical/medigun.rsi
+    size: Large
+  - type: MediGun
+    healing:
+      types:
+        Blunt: -1.75
+        Slash: -1.75
+        Piercing: -1.75
+        Heat: -1.75
+        Bloodloss: -0.5
+        Asphyxiation: -0.5
+    uberHealing:
+      types:
+        Blunt: -4
+        Slash: -4
+        Piercing: -4
+        Heat: -4
+        Bloodloss: -2
+        Asphyxiation: -2
+    soundOnTarget:
+      path: /Audio/_Goobstation/Weapons/Effects/energy_reload.ogg
+      params:
+        volume: 6
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      path: /Audio/_Goobstation/Weapons/Effects/energy_alarm.ogg
+      params:
+        volume: 6
+    soundDeactivate:
+      path: /Audio/_Goobstation/Weapons/Effects/energy_error.ogg
+      params:
+        volume: 6
+    soundFailToActivate:
+      path: /Audio/_Goobstation/Weapons/Effects/energy_error.ogg
+      params:
+        volume: 6
+  - type: UseDelay
+    delay: 1.0
+  # Visuals
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+     enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { visible: true}
+          False: { visible: false}
+
+- type: entity
+  parent: MedicalBeamGunBlueshield
+  suffix: Battery
+  id: MedicalBeamGunBlueshieldBattery
+  components:
+  - type: Battery
+    maxCharge: 10
+    startingCharge: 10
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.15
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodCloakStealthBlueshield
+  suffix: Стелс
+  name: капюшон мантии синего щита
+  description: Капюшон с фотореактивным покрытием для скрытных операций.
+  components:
+  - type: Sprite
+    sprite: _Evin/Clothing/Head/Hoods/bsohood.rsi
+  - type: Clothing
+    sprite: _Evin/Clothing/Head/Hoods/bsohood.rsi
+  - type: ClothingGrantComponent
+    component:
+    - type: Stealth
+      enabledOnDeath: false
+      enabledOnCrit: false
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+- type: entity
+  parent: [ClothingEyesBase, ShowHealthRelatedIcons, BaseCentcommContraband, ClothingEyesGlassesSunglasses]
+  id: ClothingEyesGlassesBlueshield
+  name: солнцезащитные очки
+  suffix: Камера, Синий щит
+  description: Пара чёрных солнцезащитных очков. Сбоку виднеется маленький объектив.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+  - type: DeviceNetwork
+    deviceNetId: Wired 
+    receiveFrequencyId: SurveillanceCameraCommand
+    transmitFrequencyId: SurveillanceCamera
+  - type: SurveillanceCamera
+    networkSet: true
+    nameSet: True
+    id: Glasses
+  - type: Eye
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: SurveillanceCameraMicrophone
+    blacklist:
+      components:
+      - SurveillanceCamera
+      - SurveillanceCameraMonitor
+      - RadioSpeaker
+  - type: ActiveListener
+    range: 3
+  - type: ClothingGrantComponent
+    component:
+    - type: StationAiVision
+      range: 4
+
+- type: entity
+  id: CameraMonitorBlueshieldBase
+  parent: [ BaseItem, BaseCentcommContraband ]
+  name: портативный монитор камер синего щита синего щита
+  description: Специализированный портативный монитор, разработанный для интеграции с системами безопасности и видеонаблюдения. Устройство обеспечивает мобильный контроль и мониторинг обстановки с камер наблюдения в режиме реального времени.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Evin/Objects/Devices/camerabugbso.rsi
+    layers:
+    - state: icon
+  - type: Item
+    sprite: _Evin/Objects/Devices/camerabugbso.rsi
+  - type: ActivatableUI
+    requireActiveHand: false
+    inHandsOnly: true
+    key: enum.SurveillanceCameraMonitorUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SurveillanceCameraMonitorUiKey.Key:
+        type: SurveillanceCameraMonitorBoundUserInterface
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCamera
+    transmitFrequencyId: SurveillanceCamera
+  - type: WiredNetworkConnection
+  - type: SurveillanceCameraMonitor
+
+- type: entity
+  id: CameraMonitorBlueshield
+  parent: CameraMonitorBlueshieldBase
+  name: портативный монитор камер синего щита синего щита
+  description: Специализированный портативный монитор, разработанный для интеграции с системами безопасности и видеонаблюдения. Устройство обеспечивает мобильный контроль и мониторинг обстановки с камер наблюдения в режиме реального времени.
+  components:
+  - type: Sprite
+    sprite: _Evin/Objects/Devices/camerabugbso.rsi
+    layers:
+    - state: icon
+  - type: Item
+    sprite: _Evin/Objects/Devices/camerabugbso.rsi
+
+- type: entity
+  name: острый нож синего щита
+  description: Ваша уверенность в стали.
+  parent: [BaseKnife, BaseCentcommContraband]
+  id: BetrayalKnifeBlueshield
+  components:
+  - type: Sprite
+    sprite: _Evin/Objects/Weapons/Melee/Daggers/bsowatcherknife.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: MeleeWeapon
+    angle: 0
+    wideAnimationRotation: 180
+    attackRate: 2.3
+    damage:
+      types:
+        Slash: 10
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Sharp
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+  - type: ThrowingAngle
+    angle: -330
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 17
+  - type: DisarmMalus
+    malus: 0.225
+  - type: BackStab
+  - type: Blink
+  - type: UseDelay
+    delay: 0.8
+    delays:
+      blink:
+        length: 4
+  - type: UseDelayBlockMelee
+# EvinStation End

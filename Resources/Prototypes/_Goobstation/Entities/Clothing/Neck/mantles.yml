@@ -9,13 +9,49 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: [ ClothingNeckBase, BaseCentcommContraband ]
+  abstract: true
+  parent: Clothing
+  id: ClothingNeckBlueshieldBase
+  components:
+  - type: Item
+    size: Small
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - neck
+  - type: Sprite
+    state: icon
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ ClothingNeckBlueshieldBase, BaseCentcommContraband ]
   id: ClothingNeckMantleBlueshield
-  name: blueshield officer mantle
-  description: A well-balanced, protective mantle, designed for optimal bodyguarding efficiency.
+  suffix: Стелс
+  name: мантия синего щита
+  description: мантия с фотореактивным покрытием для скрытных операций, но защита не работает, когда вы двигаетесь! Для создания поля невидимости необходим капюшон.
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/Neck/Mantle/bsomantle.rsi
   - type: Clothing
     sprite: _Goobstation/Clothing/Neck/Mantle/bsomantle.rsi
-
+# EvinStation Start
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingHeadHatHoodCloakStealthBlueshield
+    requiredSlot:
+    - neck
+  - type: UserInterface
+    interfaces:
+      enum.ToggleClothingUiKey.Key:
+        type: ToggleableClothingBoundUserInterface
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container {}
+  - type: ClothingGrantComponent
+    component:
+    - type: StealthOnMove
+      passiveVisibilityRate: -0.5
+      movementVisibilityRate: 0.6
+# EvinStation End

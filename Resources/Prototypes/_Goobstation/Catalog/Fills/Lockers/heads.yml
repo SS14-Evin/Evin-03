@@ -59,7 +59,7 @@
     - id: NitrogenTankFilled
     - id: OmnimedTool
     - id: HandheldCrewMonitorBSO
-    - id: BlueshieldUndeterminedWeapon
+#    - id: BlueshieldUndeterminedWeapon # EvinStation
     - id: BlueshieldUndeterminedHardsuit
 
 - type: entity

@@ -239,8 +239,8 @@
       - WeaponEnergyRevolver
   - type: StorageFill
     contents:
-    - id: EnergySpeedloaderLethal
-    - id: EnergySpeedloaderLethal
+#    - id: EnergySpeedloaderLethal # EvinStation
+#    - id: EnergySpeedloaderLethal # EvinStation
     - id: EnergySpeedloaderDisabler
 
 - type: entity

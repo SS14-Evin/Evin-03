@@ -15,8 +15,10 @@
 
 # Blueshield
 
+# EvinStation Start
+
 - type: entity
-  id: BlueshieldUndeterminedWeapon
+  id: BlueshieldUndeterminedClass
   name: blueshield sets pack
   description: A small box utilizing bluespace technology to drop in a loadout directly to you. Choose wisely.
   parent: [ BaseItem, BaseSetSelector, BaseCentcommContraband ]
@@ -26,13 +28,12 @@
     state: icon
   - type: SetSelector
     possibleSets:
-    - BSOBlueshieldSet
-    - BSORevolverSet
-    - BSOCQCSet
-    - BSOChesterSet
-    - BSOSyringeSet
-    maxSelectedSets: 2
+    - BSOMedic
+    - BSOWarrior
+    - BSOWatcher
+    maxSelectedSets: 1
 
+# EvinStation End
 
 - type: entity
   id: BlueshieldUndeterminedHardsuit

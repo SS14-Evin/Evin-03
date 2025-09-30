@@ -75,6 +75,17 @@
 # SPDX-FileCopyrightText: 2025 starch <starchpersonal@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
+# EvinStationStart
+- type: loadoutEffectGroup
+  id: BeretCE
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChiefEngineer
+      time: 72000 #20 hrs
+# EvinStationEnd
+
 # For mantles
 - type: loadoutEffectGroup
   id: MasterCE
@@ -122,11 +133,15 @@
   equipment:
     head: ClothingHeadHatHardhatWhite
 
-
+# EvinStationStart
 - type: loadout
   id: ChiefEngineerBeret
-  startingGear: EngineeringBeret
-
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BeretCE
+  equipment:
+    head: ClothingHeadHatBeretChiefEngineering # EvinStation | Old: EngineeringBeret
+# EvinStationEnd
 
 # Neck
 - type: loadout
