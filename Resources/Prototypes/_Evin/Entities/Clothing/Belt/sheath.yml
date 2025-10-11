@@ -1,0 +1,36 @@
+- type: entity
+  parent: [ClothingBeltBase, ClothingSlotBase]
+  id: ClothingBeltSheathMurasama
+  name: квантовые ножны
+  description: Защищают своего носителя от поражения силы тысячи богов.
+  suffix: Ghost
+  components:
+  - type: Sprite
+    sprite: _Evin/Clothing/Belt/murasama_belt.rsi
+    state: sheath_murasama_empty
+  - type: Clothing
+    sprite: _Evin/Clothing/Belt/murasama_belt.rsi
+  - type: Item
+    size: Ginormous
+  - type: ItemSlots
+    slots:
+      item:
+        name: Murasama
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        whitelist:
+          tags:
+          - Murasama
+  - type: ItemMapper
+    mapLayers:
+      sheath_murasama:
+        whitelist:
+          tags:
+          - Murasama
+  - type: Appearance
+  - type: HeldSpeedModifier
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95

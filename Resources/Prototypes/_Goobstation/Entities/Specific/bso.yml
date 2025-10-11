@@ -74,22 +74,22 @@
   id: MedicalBeamGunBlueshield
   components:
   - type: Sprite
-    sprite: _Goobstation/Objects/Specific/Medical/medigun.rsi
+    sprite: _Evin/Objects/Specific/BlueShieldOfficer/bsomedigun.rsi
     layers:
     - state: icon
     - state: active_gun
       map: [ "enum.ToggleableVisuals.Layer" ]
       visible: false
   - type: Item
-    sprite: _Goobstation/Objects/Specific/Medical/medigun.rsi
+    sprite: _Evin/Objects/Specific/BlueShieldOfficer/bsomedigun.rsi
     size: Large
   - type: MediGun
     healing:
       types:
-        Blunt: -1.75
-        Slash: -1.75
-        Piercing: -1.75
-        Heat: -1.75
+        Blunt: -1.8
+        Slash: -1.8
+        Piercing: -1.8
+        Heat: -1.8
         Bloodloss: -0.5
         Asphyxiation: -0.5
     uberHealing:

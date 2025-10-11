@@ -31,3 +31,25 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCamouflage
+  name: капюшон маскировочной сети
+  description: Капюшон что сшит с маскировочной сетью, в комплекте с ним ваш труп врятли найдут лежащим в лесу.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Evin/Clothing/Head/Hats/headstealthsum.rsi
+  - type: Clothing
+    sprite: /Textures/_Evin/Clothing/Head/Hats/headstealthsum.rsi
+  - type: Armor
+    coverage:
+    - Head
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Radiation: 0.6
+        Caustic: 0.75

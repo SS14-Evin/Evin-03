@@ -1,0 +1,36 @@
+- type: entity
+  name: мурасама
+  parent: BaseSword
+  id: Murasama
+  description: Высокочастотный клинок, способный легко разрезать даже самых могущественных врагов.
+  suffix: Ghost
+  components:
+  - type: Sprite
+    sprite: _Evin/Objects/Weapons/Melee/murasama.rsi
+    state: murasama
+  - type: PointLight
+    radius: 3.0
+    energy: 3.0
+    color: "#ff2b2b"
+  - type: MeleeWeapon
+    attackRate: 2
+    damage:
+      types:
+        Slash: 12
+        Shock: 12
+    soundHit:
+        path: _Evin/Effects/MurasamaSwing.ogg
+  - type: Reflect
+    reflectProb: .6
+    spread: 30
+  - type: Item
+    size: Ginormous
+    sprite: _Evin/Objects/Weapons/Melee/murasama.rsi
+  - type: Tag
+    tags:
+    - Murasama
+  - type: DisarmMalus
+  - type: HeldSpeedModifier
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.85

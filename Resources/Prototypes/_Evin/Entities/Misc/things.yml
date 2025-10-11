@@ -1,0 +1,20 @@
+- type: entity
+  name: квантовый разлом
+  parent: BaseItem
+  id: QuantumRiftMurasama
+  suffix: Ghost
+  description: Необычный сгусток энергии, из него доносятся голоса и электричество. Он взывает вас использовать его.
+  components:
+  - type: Sprite
+    sprite: _Evin/Objects/Misc/quantum_rift.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Tag
+    tags:
+      - Murasama
+  - type: SpawnItemsOnUse
+    items:
+      - id: ClothingBeltSheathMurasamaFilled
+    sound:
+      path: /Audio/Machines/phasein.ogg

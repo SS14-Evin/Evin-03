@@ -1,0 +1,43 @@
+- type: entity
+  parent: ClothingOuterBaseLarge
+  id: ClothingOuterSuitCamouflage
+  name: маскировочная сетка
+  description: Старая маскировочная сетка. до сих пор довольно хорошо маскирует в траве, если не хватает средств на плащи-невидимки.
+  components:
+  - type: Sprite
+    sprite: _Evin/Clothing/OuterClothing/Suits/outerclothingstealthsum.rsi
+  - type: Clothing
+    sprite: _Evin/Clothing/OuterClothing/Suits/outerclothingstealthsum.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: Armor
+    coverage:
+    - Chest
+    - Groin
+    - Arm
+    - Leg
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.9
+        Radiation: 0.5
+        Caustic: 0.75
+  - type: GroupExamine
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingHeadHatCamouflage
+    requiredSlot:
+    - outerclothing
+  - type: UserInterface
+    interfaces:
+      enum.ToggleClothingUiKey.Key:
+        type: ToggleableClothingBoundUserInterface
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container {}
+  - type: HideLayerClothing
+    slots:
+    - Hair

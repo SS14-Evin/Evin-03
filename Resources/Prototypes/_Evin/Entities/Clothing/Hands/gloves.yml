@@ -1,0 +1,23 @@
+- type: entity
+  parent: ClothingHandsGlovesBoxingRed
+  id: ClothingHandsCamouflage
+  name: армейские перчатки
+  description: Старые армейские перчатки, обеспечивают надёжную защиту рук.
+  components:
+  - type: Sprite
+    sprite: _Evin/Clothing/Hands/Gloves/glovesstealthsum.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Evin/Clothing/Hands/Gloves/glovesstealthsum.rsi
+  - type: Armor
+    coverage:
+    - Hand
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+  - type: Fiber
+    fiberMaterial: fibers-leather
+    fiberColor: fibers-green
+  - type: FingerprintMask

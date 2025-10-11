@@ -1,0 +1,53 @@
+- type: entity
+  id: ClothingBeltSheathMurasamaFilled
+  parent: ClothingBeltSheathMurasama
+  suffix: Заполнено, Ghost
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - Murasama
+
+- type: entity
+  parent: ClothingOuterStorageToggleableBase
+  id: ClothingOuterCoatJensenGhost
+  suffix: Заполнено, Ghost
+  name: пальто Дженсена
+  description: Пальто Дженсена.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Coats/jensencoat.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Coats/jensencoat.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodChaplainHood
+  - type: StorageFill
+    contents:
+      - id: PinpointerUniversal
+      - id: EncryptionKeyCommon
+      - id: ClownIDCard
+
+- type: entity
+  parent: [ BaseSubfloorAnchorStorageAnchored, ClothingBackpackSatchel, BaseMinorContraband ]
+  id: ClothingBackpackSatchelSmugglerGhost
+  name: сумка контрабандиста
+  suffix: Заполнено, Ghost
+  description: A handy, suspicious looking satchel. Just flat enough to fit underneath floor tiles.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Satchels/smuggler.rsi
+    state: icon
+  - type: StorageFill
+    contents:
+      - id: QuantumRiftMurasama
+      - id: Wrench
+      - id: AgentIDCard
+      - id: ClothingEyesThermalVisionGoggles
+      - id: ClothingHeadsetAltSyndicate
+      - id: ClothingMaskGasVoiceChameleon
+      - id: ClothingHandsGlovesCombat
+      - id: ClothingUniformJumpsuitOperative
+      - id: ClothingShoesBootsJackFilled
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: ClothingOuterCoatJensenGhost
+      - id: ClothingHeadHatPlaguedoctor
